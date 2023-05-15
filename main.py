@@ -37,8 +37,7 @@ def get_result(idText):
 
     result["g1"] = [int(get_element_text(f'//*[@id="skq"]/div/div[{idText}]/div[1]/table/tbody/tr[2]/td[2]/div/div'))]
 
-    result["g2"] = [int(get_element_text(f'//*[@id="skq"]/div/div[{idText}]/div[1]/table/tbody/tr[3]/td[2]/div/div[1]')),
-                   int(get_element_text(f'//*[@id="skq"]/div/div[{idText}]/div[1]/table/tbody/tr[3]/td[2]/div/div[2]'))]
+    result["g2"] = [int(get_element_text(f'//*[@id="skq"]/div/div[{idText}]/div[1]/table/tbody/tr[3]/td[2]/div/div[{i}]')) for i in range(1, 3)]
 
     result["g3"] = [int(get_element_text(f'//*[@id="skq"]/div/div[{idText}]/div[1]/table/tbody/tr[4]/td[2]/div/div[{i}]')) for i in range(1, 7)]
 
